@@ -1,0 +1,134 @@
+diff --git a/node_modules/gatsby-theme-portfolio-minimal/src/components/Header/index.tsx b/node_modules/gatsby-theme-portfolio-minimal/src/components/Header/index.tsx
+index 089344b..88d5922 100644
+--- a/node_modules/gatsby-theme-portfolio-minimal/src/components/Header/index.tsx
++++ b/node_modules/gatsby-theme-portfolio-minimal/src/components/Header/index.tsx
+@@ -40,7 +40,7 @@ export function Header(): React.ReactElement {
+ 
+     const sideNavigationBar = (
+         <>
+-            <div className={classes.Burger} onClick={() => setOpen(!open)}>
++            <div className={`${classes.Burger} test-burger-button`} onClick={() => setOpen(!open)}>
+                 <div style={open ? { transform: 'rotate(45deg)' } : undefined} />
+                 <div style={open ? { transform: 'translateX(20px)', opacity: 0 } : undefined} />
+                 <div style={open ? { transform: 'rotate(-45deg)' } : undefined} />
+diff --git a/node_modules/gatsby-theme-portfolio-minimal/src/components/Header/style.module.css b/node_modules/gatsby-theme-portfolio-minimal/src/components/Header/style.module.css
+index f6cdde9..0166354 100644
+--- a/node_modules/gatsby-theme-portfolio-minimal/src/components/Header/style.module.css
++++ b/node_modules/gatsby-theme-portfolio-minimal/src/components/Header/style.module.css
+@@ -4,8 +4,11 @@
+     align-items: center;
+     width: 100%;
+     height: auto;
+-    min-height: var(--header-height);
++    min-height: 100px;
+     background: var(--background-color);
++    top:0;
++    position: sticky;
++    z-index: 1000;
+ }
+ 
+ .ContentWrapper  {
+diff --git a/node_modules/gatsby-theme-portfolio-minimal/src/components/SocialProfiles/configuration.ts b/node_modules/gatsby-theme-portfolio-minimal/src/components/SocialProfiles/configuration.ts
+index 163da08..5a49962 100644
+--- a/node_modules/gatsby-theme-portfolio-minimal/src/components/SocialProfiles/configuration.ts
++++ b/node_modules/gatsby-theme-portfolio-minimal/src/components/SocialProfiles/configuration.ts
+@@ -5,4 +5,6 @@ export const socialProfileLabels = {
+     linkedin: 'LinkedIn',
+     mail: 'Mail',
+     twitter: 'Twitter',
++    instagram: 'Instagram',
++    facebook:'Facebook'
+ };
+diff --git a/node_modules/gatsby-theme-portfolio-minimal/src/components/SocialProfiles/index.tsx b/node_modules/gatsby-theme-portfolio-minimal/src/components/SocialProfiles/index.tsx
+index b44beee..c2bf07d 100644
+--- a/node_modules/gatsby-theme-portfolio-minimal/src/components/SocialProfiles/index.tsx
++++ b/node_modules/gatsby-theme-portfolio-minimal/src/components/SocialProfiles/index.tsx
+@@ -12,6 +12,8 @@ export enum SocialProfile {
+     Mail = 'mail',
+     LinkedIn = 'linkedin',
+     Twitter = 'twitter',
++    Instagram = 'instagram',
++    Facebook = 'facebook'
+ }
+ 
+ interface SocialProfilesProps {
+@@ -38,7 +40,7 @@ export function SocialProfiles(props: SocialProfilesProps): React.ReactElement {
+     });
+ 
+     return (
+-        <Slider>
++        <Slider additionalClasses={['test-social-section']}>
+             {shownProfiles.map((profile, key) => {
+                 const completeProfileData = profile.label && profile.url;
+                 return !completeProfileData ? null : (
+diff --git a/node_modules/gatsby-theme-portfolio-minimal/src/sections/Contact/index.tsx b/node_modules/gatsby-theme-portfolio-minimal/src/sections/Contact/index.tsx
+index 18decab..a950a6f 100644
+--- a/node_modules/gatsby-theme-portfolio-minimal/src/sections/Contact/index.tsx
++++ b/node_modules/gatsby-theme-portfolio-minimal/src/sections/Contact/index.tsx
+@@ -13,7 +13,7 @@ export function ContactSection(props: PageSection): React.ReactElement {
+ 
+     return (
+         <Animation type="fadeUp">
+-            <Section anchor={props.sectionId} heading={props.heading} additionalClasses={[classes.Contact]}>
++            <Section anchor={props.sectionId} heading={props.heading} additionalClasses={[classes.Contact]} data-test='contact'>
+                 {data.description && <p className={classes.Description}>{data.description}</p>}
+                 <div className={classes.Profile}>
+                     {data.image.src && (
+diff --git a/node_modules/gatsby-theme-portfolio-minimal/src/sections/Hero/index.tsx b/node_modules/gatsby-theme-portfolio-minimal/src/sections/Hero/index.tsx
+index 5f4622e..e40dab2 100644
+--- a/node_modules/gatsby-theme-portfolio-minimal/src/sections/Hero/index.tsx
++++ b/node_modules/gatsby-theme-portfolio-minimal/src/sections/Hero/index.tsx
+@@ -13,7 +13,7 @@ export function HeroSection(props: PageSection): React.ReactElement {
+ 
+     return (
+         <Animation type="fadeUp" delay={400}>
+-            <Section anchor={props.sectionId} additionalClasses={[classes.HeroContainer]}>
++            <Section anchor={props.sectionId} additionalClasses={[classes.HeroContainer]} data-test='hero'>
+                 {data.heroPhoto?.src && (
+                     <div className={classes.heroImageCont}>
+                         <GatsbyImage
+diff --git a/node_modules/gatsby-theme-portfolio-minimal/src/sections/Hero/style.module.css b/node_modules/gatsby-theme-portfolio-minimal/src/sections/Hero/style.module.css
+index 2cb6818..9567fd0 100644
+--- a/node_modules/gatsby-theme-portfolio-minimal/src/sections/Hero/style.module.css
++++ b/node_modules/gatsby-theme-portfolio-minimal/src/sections/Hero/style.module.css
+@@ -1,5 +1,7 @@
+ .HeroContainer {
+     display: flex;
++    min-height: calc(100vh - 182px);
++    align-items: center;
+ }
+ 
+ .Hero {
+@@ -7,7 +9,6 @@
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+-    min-height: 50vh;
+ }
+ 
+ .Hero .Title {
+@@ -91,9 +92,7 @@
+     .HeroContainer {
+         flex-direction: column;
+         margin-bottom: 50px;
+-    }
+-
+-    .Hero {
+-        display: block;
++        justify-content: center;
++        align-items: unset;
+     }
+ }
+diff --git a/node_modules/gatsby-theme-portfolio-minimal/src/sections/Projects/index.tsx b/node_modules/gatsby-theme-portfolio-minimal/src/sections/Projects/index.tsx
+index 35a9dfb..5833093 100644
+--- a/node_modules/gatsby-theme-portfolio-minimal/src/sections/Projects/index.tsx
++++ b/node_modules/gatsby-theme-portfolio-minimal/src/sections/Projects/index.tsx
+@@ -15,7 +15,7 @@ export function ProjectsSection(props: PageSection): React.ReactElement {
+     return (
+         <Animation type="fadeIn">
+             <Section anchor={props.sectionId} heading={props.heading}>
+-                <Slider additionalClasses={[classes.Projects]}>
++                <Slider additionalClasses={[classes.Projects]} data-test="project-section">
+                     {data.projects.map((project, key) => {
+                         return project.visible ? <Project key={key} index={key} data={project} /> : null;
+                     })}

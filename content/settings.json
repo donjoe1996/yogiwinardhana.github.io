@@ -1,0 +1,43 @@
+{
+  "siteMetadata": {
+    "language": "en",
+    "siteUrl": "http://localhost:8000/",
+    "title": "I Made Yogi Winardhana",
+    "titleTemplate": "%s · I Made Yogi Winardhana",
+    "description": "Portfolio Website",
+    "author": "I Made Yogi Winardhana",
+    "avatar": "../content/images/YogiWinardhana.jpg",
+    "bio": "This biography will be used in the footer area of an article and can contain some more details about the author.",
+    "social": {
+      "github"  : "https://github.com/yogiwinardhana/",
+      "linkedin": "https://www.linkedin.com/in/imadeyogi-winardhana/",
+      "mail"    : "mailto:yogik.winardhana@gmail.com",
+      "twitter" :"",
+      "facebook": "",
+      "instagram": ""
+    }
+  },
+  "siteConfiguration": {
+    "logo": { "text": "Made Yogi" },
+    "navigation": {
+      "header": [
+        { "label": "About", "url": "/#about" },
+        { "label": "Skills", "url": "/#skills" },
+        { "label": "Projects", "url": "/#projects" }
+      ],
+      "ctaButton": {
+        "openNewTab": false,
+        "label": "Contact",
+        "url": "/#contact"
+      },
+      "footer": [
+        { "label": "Privacy", "url": "/privacy" }
+      ]
+    },
+    "featureToggles": {
+      "useDarkModeAsDefault": false,
+      "useDarkModeBasedOnUsersPreference": true,
+      "useCookieBar": false
+    }
+  }
+}

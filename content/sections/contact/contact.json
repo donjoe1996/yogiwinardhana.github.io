@@ -1,0 +1,13 @@
+{
+  "name": "I Made Yogi Winardhana",
+  "email": "yogik.winardhana@gmail.com",
+  "description": "",
+  "image": {
+    "src": "../../images/PutuAditya-rect.jpg",
+    "alt": "I Made Yogi Winardhana"
+  },
+  "socialProfiles": {
+    "from": ["LinkedIn", "Github", "Mail"],
+    "showIcons": true
+  }
+}

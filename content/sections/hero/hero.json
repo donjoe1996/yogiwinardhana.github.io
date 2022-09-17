@@ -1,0 +1,18 @@
+{
+  "intro": "Hello",
+  "image": {
+    "src": "../../images/waving-hand.png",
+    "alt": "Waving Hand Emoji"
+  },
+  "title": "Welcome To My Portfolio",
+  "subtitle": {
+    "prefix": "",
+    "highlight": "",
+    "suffix": ""
+  },
+  "description": "GIS Specialist and Spatial Programming",
+  "socialProfiles": {
+    "from": ["LinkedIn", "Github", "Mail"],
+    "showIcons": true
+  }
+}
