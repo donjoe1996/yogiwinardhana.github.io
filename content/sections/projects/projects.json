@@ -2,10 +2,10 @@
   "projects": [
     {
       "visible": true,
-      "category": "GIS Specialist and Spatial Programming",
+      "category": "WebGIS Project",
       "title": "Geowisata Lombok",
-      "description": "Geowisata Lombok is a digital explore Lombok website which was originally done for the NTB Tourism Office but stopped for several reasons. I'm working on this project together with friends, where I work on the backend and the frontend, and my friend is working on the geodesy side. The backend on this website uses native PHP and the frontend uses ReactJs.",
-      "tags": ["PHP", "NodeJs", "ReactJs", "NextJs"],
+      "description": "Geowisata Lombok is a webGIS website which was originally intended for the local tourism government but stopped due to several reasons. My responsibilities was to prepare the spatial data and set up the Geoserver configuration. Meanwhile, my friend worked on the backend and the frontend.",
+      "tags": ["Geoserver", "ArcGIS", "PostgreSQL"],
       "image": {
         "src": "../../images/geowisata.png",
         "alt": "Quick Setup"
@@ -19,19 +19,15 @@
     },
     {
       "visible": true,
-      "category": "GIS Engineer and Spatial Programming",
+      "category": "Personal Website",
       "title": "Geosai",
-      "description": "Geosai is a personal website which I use it to learn new things about spatial stuff. This website has actually been around since 2020 using wordpress.",
-      "tags": ["Remote Sensing", "Python", "GIS"],
+      "description": "Geosai is a personal website which I use it to learn new things about spatial stuff. This website has actually been around since 2020 and running under Wordpress engine.",
+      "tags": ["Remote Sensing", "Python", "GIS", "Spatial"],
       "image": {
         "src": "../../images/geosai.png",
         "alt": "Geosai"
       },
       "links": [
-        {
-          "type": "github",
-          "url": "https://github.com/---------------------------"
-        },
         {
           "type": "external",
           "url": "https://geosai.my.id"
@@ -40,39 +36,35 @@
     },
     {
       "visible": true,
-      "category": "FULLSTACK DEVELOPER",
-      "title": "Portalnesia Native",
-      "description": "Portalnesia Native is an android application development from portalnesia website. This project started from my curiosity against the React Native multi-platform framework. The plan I will also recreate this project but using flutter framework.",
-      "tags": ["Android", "React Native"],
+      "category": "Remote Sensing",
+      "title": "Landcover Analysis Using GEE",
+      "description": "This project was requested by one of my friend. The study area located in Nganjuk Jawa Timur. Using more than 500 sample points, I try to generate landcover using Random Forest Algorythm",
+      "tags": ["Remote Sensing", "Google Earth Engine"],
       "image": {
-        "src": "../../images/portalnesia-native.png",
-        "alt": "Portalnesia Native"
+        "src": "../../images/landcover_nganjuk.png",
+        "alt": "Landcover Nganjuk"
       },
       "links": [
         {
           "type": "github",
-          "url": "https://github.com/portalnesia/portalnesia-native"
+          "url": "https://github.com/yogiwinardhana/"
         }
       ]
     },
     {
       "visible": true,
-      "category": "FULLSTACK DEVELOPER",
-      "title": "SansOrder",
-      "description": "SansOrder is a personal project that I made out of curiosity about the POS (Point of Sales) system. This website was created using a free CMS service, StrapiJs to facilitate the backend service. And using reactjs for the frontend service. ",
-      "tags": ["NodeJs", "ReactJs", "NextJs"],
+      "category": "Python",
+      "title": "Automatic Mapping with Python",
+      "description": "Generate python script for automatic mapping. Taking advantage from scripting, I try to create script that works by exporting a new map from different bookmarks list. Thus I can create many maps in an efficient manner. ",
+      "tags": ["Python", "ArcPy", "ArcGIS"],
       "image": {
-        "src": "../../images/sansorder.png",
-        "alt": "SansOrder"
+        "src": "../../images/arcpymapping.png",
+        "alt": "Arcpy Mapping"
       },
       "links": [
         {
           "type": "github",
-          "url": "https://github.com/portalnesia/sans-order"
-        },
-        {
-          "type": "external",
-          "url": "https://sansorder.portalnesia.com"
+          "url": "https://github.com/yogiwinardhana/"
         }
       ]
     }
@@ -80,6 +72,6 @@
   "button": {
     "visible": true,
     "label": "Visit on Github",
-    "url": "https://github.com/portalnesia"
+    "url": "https://github.com/yogiwinardhana/"
   }
 }

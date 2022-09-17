@@ -1,6 +1,5 @@
 <img src="screenshot.png" alt="Gatsby Theme Portfolio Minimal Screenshot" width="700" />
 
-<<<<<<< HEAD
 # yogiwinardhana.github.io
 
 #### My Portfolio Website.
@@ -9,14 +8,13 @@ yogiwinardhana.github.io is an open sources NodeJs application for my portfolio 
 
 [Live Websites](https://yogiwinardhana.geosai.my.id)
 =======
-# putuaditya.github.io
+# yogiwinardhana.github.io
 
 #### My Portfolio Website.
 
-putuaditya.github.io is an open sources NodeJs application for my portfolio websites build with GatsbyJs and [Portfolio Minimal](https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal/tree/main/gatsby-theme-portfolio-minimal#readme).
+yogiwinardhana.github.io is an open sources NodeJs application for my portfolio websites build with GatsbyJs and [Portfolio Minimal](https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal/tree/main/gatsby-theme-portfolio-minimal#readme).
 
-[Live Websites](https://aditya.portalnesia.com)
->>>>>>> 68de347a18742b9fcf4800c64e1f85fd4e81b2b3
+[Live Websites](https://yogiwinardhana.geosai.my.id)
 
 Just clone this Repository, add/edit the content. And that's it!
 

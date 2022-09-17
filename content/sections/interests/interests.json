@@ -45,64 +45,8 @@
     {
       "label": "QGIS",
       "image": {
-        "src": "../../images/qgis.png",
+        "src": "../../images/qgis.jpg",
         "alt": "QGIS"
-      }
-    },
-    {
-      "label": "PHP",
-      "image": {
-        "src": "../../images/php.jpg",
-        "alt": "PHP"
-      }
-    },
-    {
-      "label": "Golang",
-      "image": {
-        "src": "../../images/golang.png",
-        "alt": "Golang"
-      }
-    },
-    {
-      "label": "Mysql",
-      "image": {
-        "src": "../../images/mysql.jpg",
-        "alt": "Mysql"
-      }
-    },
-    {
-      "label": "Rest API",
-      "image": {
-        "src": "../../images/rest-api.png",
-        "alt": "Rest API"
-      }
-    },
-    {
-      "label": "NodeJs",
-      "image": {
-        "src": "../../images/nodejs.png",
-        "alt": "NodeJs"
-      }
-    },
-    {
-      "label": "ReactJs",
-      "image": {
-        "src": "../../images/react.png",
-        "alt": "ReactJs"
-      }
-    },
-    {
-      "label": "React Native",
-      "image": {
-        "src": "../../images/react.png",
-        "alt": "React Native"
-      }
-    },
-    {
-      "label": "Flutter",
-      "image": {
-        "src": "../../images/flutter.png",
-        "alt": "Flutter"
       }
     },
     {
@@ -112,11 +56,18 @@
         "alt": "Python"
       }
     },
-    {
-      "label": "Java",
+	{
+      "label": "Anaconda",
       "image": {
-        "src": "../../images/java.png",
-        "alt": "Java"
+        "src": "../../images/anaconda.png",
+        "alt": "Anaconda"
+      }
+    },
+	{
+      "label": "Global Mapper",
+      "image": {
+        "src": "../../images/globalmapper.png",
+        "alt": "Global Mapper"
       }
     }
   ],
